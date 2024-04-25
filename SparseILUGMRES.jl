@@ -71,6 +71,7 @@ function driver!(x, A, b, P)
     nothing
 end
 # Without preconditioner
+println("GMRES with no preconditioner")
 dA = Duplicated(A, duplicate(A))
 db = Duplicated(b, zeros(length(b)))
 dx = Duplicated(zeros(length(b)), zeros(length(b)))
@@ -85,6 +86,7 @@ Enzyme.autodiff(
     Const(P) # nopreconditioning
 )
 # With preconditioner
+println("GMRES with ILU")
 dA = Duplicated(A, duplicate(A))
 db = Duplicated(b, zeros(length(b)))
 dx = Duplicated(zeros(length(b)), zeros(length(b)))

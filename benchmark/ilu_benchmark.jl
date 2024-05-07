@@ -23,18 +23,34 @@ function duplicate(A::SparseMatrixCSC)
 end
 
 # Reverse AD
-function driver!(solver, A, b, P)
+function driver!(solver::GmresSolver, A, b, P, restart=false)
     gmres!(solver, A,b; M=P, N=I,
+        verbose=0, restart=restart,
+        ldiv = isa(P, IncompleteLU.ILUFactorization) ? true : false
+    )
+    return nothing
+end
+
+function driver!(solver::BicgstabSolver, A, b, P, restart=false)
+    bicgstab!(solver, A,b; M=P, N=I,
         verbose=0,
         ldiv = isa(P, IncompleteLU.ILUFactorization) ? true : false
     )
     return nothing
 end
+
+function init_solver(fsolver, A, b, restart)
+    if restart
+        fsolver(A, b, 30)
+    else
+        fsolver(A, b)
+    end
+
+end
 # Without and with preconditioner
-function compare_precond_noprecond_ilu(A,b)
-    # println("GMRES with no preconditioner")
-    solver = GmresSolver(A,b)
-    dupsolver = Duplicated(solver, GmresSolver(A,b))
+function compare_precond_noprecond_ilu(fsolver, A, b, restart)
+    solver = init_solver(fsolver, A, b, restart)
+    dupsolver = Duplicated(solver, init_solver(fsolver, A, b, restart))
     dupA = Duplicated(A, duplicate(A))
     dupb = Duplicated(b, zeros(length(b)))
     dupsolver.dval.x .= 1.0
@@ -46,12 +62,13 @@ function compare_precond_noprecond_ilu(A,b)
         Const(A),
         dupb,
         Const(P), # nopreconditioning
+        Const(restart)
     )
     iters = [dupsolver.val.stats.niter, dupsolver.dval.stats.niter]
+    stats = [dupsolver.val.stats.status, dupsolver.dval.stats.status]
     # With preconditioner
-    println("GMRES with ILU")
-    solver = GmresSolver(A,b)
-    dupsolver = Duplicated(solver, GmresSolver(A,b))
+    solver = init_solver(fsolver, A, b, restart)
+    dupsolver = Duplicated(solver, init_solver(fsolver, A, b, restart))
     dupA = Duplicated(A, duplicate(A))
     dupb = Duplicated(ones(length(b)), zeros(length(b)))
     dupsolver.dval.x .= 1.0
@@ -63,40 +80,38 @@ function compare_precond_noprecond_ilu(A,b)
         Const(A),
         dupb,
         Const(P), # nopreconditioning
+        Const(restart)
     )
 
     iters = vcat(iters, [dupsolver.val.stats.niter, dupsolver.dval.stats.niter])
+    stats = vcat(stats, [dupsolver.val.stats.status, dupsolver.dval.stats.status])
 
-    # x = A\b
-    # db = ones(length(b))
-    # dx = adjoint(A)\db
-
-    # all(isapprox.(dx, dupb.dval, atol=1e-4, rtol=1e-4))
+    return iters, stats
 end
 
+include("../src/load_case.jl")
 include("../cases/xyz_cases.jl")
-cases = xyz_cases
-results_file = "results.csv"
-results = Matrix(undef, 0, 6)
-# A,b = load_case(cases[1][1])
-# fill!(results, zero(Int))
-for (i,case) in enumerate(cases)
-    if i < 47
-        continue
+include("../src/scaling.jl")
+for setup in [(GmresSolver, false), (GmresSolver, true), (BicgstabSolver, false)]
+    # setup = (GmresSolver, false)
+    fsolver, restart = setup
+    cases = xyz_cases
+    results_file = "./results/iters_$(fsolver)_$(restart).csv"
+    results = Matrix(undef, 0, 6)
+    stats_file = "./results/stats_$(fsolver)_$(restart).csv"
+    stats = Matrix(undef, 0, 5)
+    for (i,case) in enumerate(cases)
+        # i = 1
+        # case = cases[i]
+        A, b = load_case(case[1])
+        DAD, D = scaleSID(A)
+        A = DAD
+        b = D*b
+        n = size(A,1)
+        iters, stat = compare_precond_noprecond_ilu(fsolver,A,b,restart)
+        results = vcat(results, reshape([case[1], iters[1], iters[2], iters[3], iters[4], n], (1,6)))
+        stats = vcat(stats, reshape([case[1], stat[1], stat[2], stat[3], stat[4]], (1,5)))
+        writedlm(results_file, results)
+        writedlm(stats_file, stats)
     end
-    case = cases[i]
-    A, b = load_case(case[1])
-    n = size(A,1)
-    try
-        iters = compare_precond_noprecond_ilu(A,b)
-    catch
-        iters = [0,0,0,0]
-    end
-    println("GMRES iterations")
-    println("----------------")
-    println("        \\wo P \\w P")
-    println("Forward: $(iters[1]) $(iters[3])")
-    println("Reverse: $(iters[2]) $(iters[4])")
-    results = vcat(results, reshape([case[1], iters[1], iters[2], iters[3], iters[4], n], (1,6)))
-    writedlm(results_file, results)
 end

@@ -9,18 +9,11 @@ using Test
 using FiniteDifferences
 using IncompleteLU
 
-include("get_div_grad.jl")
-include("utils.jl")
+include("../src/utils.jl")
 
 # Pick solver
 solver = Krylov.gmres
 
-# Build Laplacian
-function sparse_laplacian(n :: Int=16; FC=Float64)
-    A = get_div_grad(n, n, n)
-    b = ones(n^3)
-    return A, b
-end
 A, b = sparse_laplacian(4, FC=Float64)
 
 # Central Differences

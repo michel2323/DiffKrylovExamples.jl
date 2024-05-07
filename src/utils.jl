@@ -75,3 +75,11 @@ function check_derivatives_and_values_active_passive(solver, A, b, x)
     isapprox(value.(dx), x)
     @test isapprox(partials.(dx,1), fda[1])
 end
+
+include("get_div_grad.jl")
+# Build Laplacian
+function sparse_laplacian(n :: Int=16; FC=Float64)
+    A = get_div_grad(n, n, n)
+    b = ones(n^3)
+    return A, b
+end

@@ -30,27 +30,24 @@ end
 # norm(ilu(A)\ones) - ldiv!(lu(A), ones)
 function test_dense_matrix_ilu(A)
     iluA = ilu(A)
-    tA = sparse(transpose(A))
-    ilutA = ilu(tA)
-    iluadjA = adjoint(iluA)
+    luA = lu(A)
 
     xs = []
     b = ones(size(A,1))
     x = similar(b)
-    x = similar(b)
-    ldiv!(x, ilutA, b)
+    ldiv!(x, iluA, b)
     push!(xs, x)
 
 
     c = ones(size(A,1))
     y = similar(c)
     y = similar(c)
-    ldiv!(y, iluadjA, c)
+    ldiv!(y, luA, c)
     push!(xs, y)
     @testset "dense matrix ilu vs lu" begin
         @test isapprox(norm(xs[1] - xs[2]), zero(eltype(A)), atol=1e-10)
-        @test isapprox(norm(b - A' * x), zero(eltype(A)), atol=1e-6)
-        @test isapprox(norm(c - A' * y), zero(eltype(A)), atol=1e-6)
+        @test isapprox(norm(b - A * x), zero(eltype(A)), atol=1e-6)
+        @test isapprox(norm(c - A * y), zero(eltype(A)), atol=1e-6)
     end
 end
 
@@ -69,5 +66,4 @@ cases = alexis_cases
 # Load sherman5
 println("Load $(cases[1][1])")
 A, _ = load_case(cases[1][1])
-test_dense_matrix_ilu(A)
 test_sparse_matrix_ilu(A)

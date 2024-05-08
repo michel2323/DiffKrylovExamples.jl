@@ -1,64 +1,64 @@
-bfwa398	solution good enough given atol and rtol	solution good enough given atol and rtol	solution good enough given atol and rtol	solution good enough given atol and rtol
-bfwa62	solution good enough given atol and rtol	solution good enough given atol and rtol	solution good enough given atol and rtol	solution good enough given atol and rtol
-bfwa782	solution good enough given atol and rtol	solution good enough given atol and rtol	solution good enough given atol and rtol	solution good enough given atol and rtol
-bwm200	solution good enough given atol and rtol	solution good enough given atol and rtol	solution good enough given atol and rtol	solution good enough given atol and rtol
-bwm2000	solution good enough given atol and rtol	solution good enough given atol and rtol	maximum number of iterations exceeded	maximum number of iterations exceeded
-cdde1	solution good enough given atol and rtol	solution good enough given atol and rtol	solution good enough given atol and rtol	solution good enough given atol and rtol
-cdde2	solution good enough given atol and rtol	solution good enough given atol and rtol	solution good enough given atol and rtol	breakdown αₖ == 0
-cdde3	solution good enough given atol and rtol	solution good enough given atol and rtol	solution good enough given atol and rtol	solution good enough given atol and rtol
-cdde4	solution good enough given atol and rtol	solution good enough given atol and rtol	solution good enough given atol and rtol	breakdown αₖ == 0
-cdde5	solution good enough given atol and rtol	solution good enough given atol and rtol	solution good enough given atol and rtol	solution good enough given atol and rtol
-cdde6	solution good enough given atol and rtol	solution good enough given atol and rtol	solution good enough given atol and rtol	breakdown αₖ == 0
-ck104	solution good enough given atol and rtol	solution good enough given atol and rtol	solution good enough given atol and rtol	breakdown αₖ == 0
-ck400	solution good enough given atol and rtol	solution good enough given atol and rtol	solution good enough given atol and rtol	breakdown αₖ == 0
-ck656	solution good enough given atol and rtol	solution good enough given atol and rtol	solution good enough given atol and rtol	breakdown αₖ == 0
-dw1024	solution good enough given atol and rtol	solution good enough given atol and rtol	solution good enough given atol and rtol	solution good enough given atol and rtol
-dw256A	solution good enough given atol and rtol	solution good enough given atol and rtol	solution good enough given atol and rtol	solution good enough given atol and rtol
-dw256B	solution good enough given atol and rtol	solution good enough given atol and rtol	solution good enough given atol and rtol	solution good enough given atol and rtol
-dw4096	breakdown αₖ == 0	maximum number of iterations exceeded	solution good enough given atol and rtol	solution good enough given atol and rtol
-lop163	solution good enough given atol and rtol	maximum number of iterations exceeded	solution good enough given atol and rtol	maximum number of iterations exceeded
+bfwa398	user-requested exit	user-requested exit	user-requested exit	user-requested exit
+bfwa62	user-requested exit	user-requested exit	user-requested exit	user-requested exit
+bfwa782	user-requested exit	user-requested exit	user-requested exit	user-requested exit
+bwm200	user-requested exit	user-requested exit	user-requested exit	user-requested exit
+bwm2000	user-requested exit	user-requested exit	maximum number of iterations exceeded	maximum number of iterations exceeded
+cdde1	user-requested exit	user-requested exit	user-requested exit	user-requested exit
+cdde2	user-requested exit	user-requested exit	user-requested exit	breakdown αₖ == 0
+cdde3	user-requested exit	user-requested exit	user-requested exit	user-requested exit
+cdde4	user-requested exit	user-requested exit	user-requested exit	breakdown αₖ == 0
+cdde5	user-requested exit	user-requested exit	user-requested exit	user-requested exit
+cdde6	user-requested exit	user-requested exit	user-requested exit	breakdown αₖ == 0
+ck104	user-requested exit	user-requested exit	user-requested exit	breakdown αₖ == 0
+ck400	user-requested exit	user-requested exit	user-requested exit	breakdown αₖ == 0
+ck656	user-requested exit	user-requested exit	user-requested exit	breakdown αₖ == 0
+dw1024	user-requested exit	user-requested exit	user-requested exit	user-requested exit
+dw256A	user-requested exit	user-requested exit	user-requested exit	user-requested exit
+dw256B	user-requested exit	user-requested exit	user-requested exit	user-requested exit
+dw4096	breakdown αₖ == 0	maximum number of iterations exceeded	maximum number of iterations exceeded	breakdown αₖ == 0
+lop163	user-requested exit	maximum number of iterations exceeded	user-requested exit	maximum number of iterations exceeded
 mhda416	maximum number of iterations exceeded	maximum number of iterations exceeded	breakdown αₖ == 0	breakdown αₖ == 0
-odepa400	solution good enough given atol and rtol	solution good enough given atol and rtol	solution good enough given atol and rtol	solution good enough given atol and rtol
-olm100	maximum number of iterations exceeded	maximum number of iterations exceeded	solution good enough given atol and rtol	maximum number of iterations exceeded
-olm1000	maximum number of iterations exceeded	breakdown αₖ == 0	solution good enough given atol and rtol	maximum number of iterations exceeded
-olm2000	maximum number of iterations exceeded	breakdown αₖ == 0	solution good enough given atol and rtol	maximum number of iterations exceeded
-olm500	maximum number of iterations exceeded	maximum number of iterations exceeded	solution good enough given atol and rtol	maximum number of iterations exceeded
+odepa400	user-requested exit	user-requested exit	user-requested exit	user-requested exit
+olm100	maximum number of iterations exceeded	maximum number of iterations exceeded	user-requested exit	maximum number of iterations exceeded
+olm1000	maximum number of iterations exceeded	breakdown αₖ == 0	user-requested exit	maximum number of iterations exceeded
+olm2000	maximum number of iterations exceeded	breakdown αₖ == 0	user-requested exit	maximum number of iterations exceeded
+olm500	maximum number of iterations exceeded	maximum number of iterations exceeded	user-requested exit	maximum number of iterations exceeded
 olm5000	maximum number of iterations exceeded	breakdown αₖ == 0	solution good enough given atol and rtol	breakdown αₖ == 0
-pde225	solution good enough given atol and rtol	solution good enough given atol and rtol	solution good enough given atol and rtol	breakdown αₖ == 0
-pde2961	solution good enough given atol and rtol	solution good enough given atol and rtol	solution good enough given atol and rtol	breakdown αₖ == 0
-pde900	solution good enough given atol and rtol	solution good enough given atol and rtol	solution good enough given atol and rtol	breakdown αₖ == 0
+pde225	user-requested exit	user-requested exit	user-requested exit	breakdown αₖ == 0
+pde2961	user-requested exit	user-requested exit	user-requested exit	breakdown αₖ == 0
+pde900	user-requested exit	user-requested exit	user-requested exit	breakdown αₖ == 0
 qh882	breakdown αₖ == 0	breakdown αₖ == 0	breakdown αₖ == 0	breakdown αₖ == 0
 rbsa480	breakdown αₖ == 0	breakdown αₖ == 0	solution good enough given atol and rtol	maximum number of iterations exceeded
 rbsb480	breakdown αₖ == 0	breakdown αₖ == 0	maximum number of iterations exceeded	maximum number of iterations exceeded
-rdb2048	breakdown αₖ == 0	solution good enough given atol and rtol	solution good enough given atol and rtol	breakdown αₖ == 0
-rdb5000	solution good enough given atol and rtol	solution good enough given atol and rtol	solution good enough given atol and rtol	breakdown αₖ == 0
-rdb968	breakdown αₖ == 0	breakdown αₖ == 0	solution good enough given atol and rtol	breakdown αₖ == 0
+rdb2048	breakdown αₖ == 0	user-requested exit	user-requested exit	breakdown αₖ == 0
+rdb5000	user-requested exit	user-requested exit	user-requested exit	breakdown αₖ == 0
+rdb968	breakdown αₖ == 0	breakdown αₖ == 0	user-requested exit	breakdown αₖ == 0
 rw136	breakdown αₖ == 0	breakdown αₖ == 0	breakdown αₖ == 0	breakdown αₖ == 0
-rw496	breakdown αₖ == 0	breakdown αₖ == 0	breakdown αₖ == 0	breakdown αₖ == 0
+rw496	breakdown αₖ == 0	breakdown αₖ == 0	maximum number of iterations exceeded	maximum number of iterations exceeded
 rw5151	breakdown αₖ == 0	breakdown αₖ == 0	breakdown αₖ == 0	breakdown αₖ == 0
-tub100	solution good enough given atol and rtol	solution good enough given atol and rtol	solution good enough given atol and rtol	solution good enough given atol and rtol
-tub1000	solution good enough given atol and rtol	solution good enough given atol and rtol	solution good enough given atol and rtol	solution good enough given atol and rtol
+tub100	user-requested exit	user-requested exit	user-requested exit	user-requested exit
+tub1000	user-requested exit	user-requested exit	user-requested exit	user-requested exit
 cryg10000	breakdown αₖ == 0	breakdown αₖ == 0	solution good enough given atol and rtol	breakdown αₖ == 0
 cryg2500	breakdown αₖ == 0	breakdown αₖ == 0	solution good enough given atol and rtol	breakdown αₖ == 0
-dw2048	solution good enough given atol and rtol	solution good enough given atol and rtol	solution good enough given atol and rtol	solution good enough given atol and rtol
-dw8192	breakdown αₖ == 0	maximum number of iterations exceeded	solution good enough given atol and rtol	solution good enough given atol and rtol
-dwa512	solution good enough given atol and rtol	solution good enough given atol and rtol	solution good enough given atol and rtol	solution good enough given atol and rtol
-dwb512	solution good enough given atol and rtol	solution good enough given atol and rtol	solution good enough given atol and rtol	solution good enough given atol and rtol
+dw2048	user-requested exit	user-requested exit	user-requested exit	user-requested exit
+dw8192	breakdown αₖ == 0	maximum number of iterations exceeded	maximum number of iterations exceeded	breakdown αₖ == 0
+dwa512	user-requested exit	user-requested exit	user-requested exit	user-requested exit
+dwb512	user-requested exit	user-requested exit	user-requested exit	user-requested exit
 mhd3200a	breakdown αₖ == 0	breakdown αₖ == 0	breakdown αₖ == 0	breakdown αₖ == 0
 mhd4800a	breakdown αₖ == 0	breakdown αₖ == 0	breakdown αₖ == 0	breakdown αₖ == 0
 qh1484	breakdown αₖ == 0	breakdown αₖ == 0	breakdown αₖ == 0	breakdown αₖ == 0
 qh768	breakdown αₖ == 0	breakdown αₖ == 0	breakdown αₖ == 0	breakdown αₖ == 0
-rdb1250	solution good enough given atol and rtol	solution good enough given atol and rtol	solution good enough given atol and rtol	breakdown αₖ == 0
-rdb1250l	breakdown αₖ == 0	breakdown αₖ == 0	solution good enough given atol and rtol	maximum number of iterations exceeded
-rdb200	solution good enough given atol and rtol	solution good enough given atol and rtol	solution good enough given atol and rtol	maximum number of iterations exceeded
-rdb200l	breakdown αₖ == 0	breakdown αₖ == 0	solution good enough given atol and rtol	solution good enough given atol and rtol
-rdb2048_noL	solution good enough given atol and rtol	solution good enough given atol and rtol	solution good enough given atol and rtol	breakdown αₖ == 0
-rdb3200l	solution good enough given atol and rtol	solution good enough given atol and rtol	solution good enough given atol and rtol	breakdown αₖ == 0
-rdb450	solution good enough given atol and rtol	solution good enough given atol and rtol	solution good enough given atol and rtol	breakdown αₖ == 0
-rdb450l	solution good enough given atol and rtol	solution good enough given atol and rtol	solution good enough given atol and rtol	maximum number of iterations exceeded
-rdb800l	breakdown αₖ == 0	solution good enough given atol and rtol	solution good enough given atol and rtol	breakdown αₖ == 0
-tols1090	breakdown αₖ == 0	solution good enough given atol and rtol	solution good enough given atol and rtol	solution good enough given atol and rtol
-tols2000	breakdown αₖ == 0	solution good enough given atol and rtol	solution good enough given atol and rtol	solution good enough given atol and rtol
-tols340	solution good enough given atol and rtol	solution good enough given atol and rtol	solution good enough given atol and rtol	solution good enough given atol and rtol
+rdb1250	user-requested exit	user-requested exit	user-requested exit	breakdown αₖ == 0
+rdb1250l	breakdown αₖ == 0	breakdown αₖ == 0	user-requested exit	maximum number of iterations exceeded
+rdb200	user-requested exit	user-requested exit	user-requested exit	maximum number of iterations exceeded
+rdb200l	user-requested exit	breakdown αₖ == 0	user-requested exit	user-requested exit
+rdb2048_noL	user-requested exit	user-requested exit	user-requested exit	breakdown αₖ == 0
+rdb3200l	user-requested exit	user-requested exit	user-requested exit	breakdown αₖ == 0
+rdb450	user-requested exit	user-requested exit	user-requested exit	breakdown αₖ == 0
+rdb450l	user-requested exit	user-requested exit	user-requested exit	maximum number of iterations exceeded
+rdb800l	breakdown αₖ == 0	user-requested exit	user-requested exit	breakdown αₖ == 0
+tols1090	breakdown αₖ == 0	user-requested exit	solution good enough given atol and rtol	solution good enough given atol and rtol
+tols2000	breakdown αₖ == 0	user-requested exit	solution good enough given atol and rtol	maximum number of iterations exceeded
+tols340	user-requested exit	user-requested exit	solution good enough given atol and rtol	solution good enough given atol and rtol
 tols4000	breakdown αₖ == 0	breakdown αₖ == 0	breakdown αₖ == 0	breakdown αₖ == 0
 tols90	breakdown αₖ == 0	maximum number of iterations exceeded	breakdown αₖ == 0	breakdown αₖ == 0

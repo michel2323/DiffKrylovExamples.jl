@@ -1,48 +1,48 @@
 bfwa398	maximum number of iterations exceeded	maximum number of iterations exceeded	solution good enough given atol and rtol	solution good enough given atol and rtol
-bfwa62	solution good enough given atol and rtol	solution good enough given atol and rtol	solution good enough given atol and rtol	solution good enough given atol and rtol
-bfwa782	maximum number of iterations exceeded	maximum number of iterations exceeded	solution good enough given atol and rtol	solution good enough given atol and rtol
-bwm200	maximum number of iterations exceeded	maximum number of iterations exceeded	solution good enough given atol and rtol	solution good enough given atol and rtol
-bwm2000	maximum number of iterations exceeded	maximum number of iterations exceeded	solution good enough given atol and rtol	solution good enough given atol and rtol
-cdde1	solution good enough given atol and rtol	solution good enough given atol and rtol	solution good enough given atol and rtol	solution good enough given atol and rtol
-cdde2	solution good enough given atol and rtol	solution good enough given atol and rtol	solution good enough given atol and rtol	maximum number of iterations exceeded
-cdde3	maximum number of iterations exceeded	maximum number of iterations exceeded	solution good enough given atol and rtol	solution good enough given atol and rtol
-cdde4	solution good enough given atol and rtol	solution good enough given atol and rtol	solution good enough given atol and rtol	maximum number of iterations exceeded
-cdde5	maximum number of iterations exceeded	maximum number of iterations exceeded	solution good enough given atol and rtol	solution good enough given atol and rtol
+bfwa62	user-requested exit	user-requested exit	solution good enough given atol and rtol	solution good enough given atol and rtol
+bfwa782	maximum number of iterations exceeded	maximum number of iterations exceeded	solution good enough given atol and rtol	user-requested exit
+bwm200	maximum number of iterations exceeded	user-requested exit	solution good enough given atol and rtol	user-requested exit
+bwm2000	maximum number of iterations exceeded	maximum number of iterations exceeded	user-requested exit	user-requested exit
+cdde1	user-requested exit	user-requested exit	solution good enough given atol and rtol	user-requested exit
+cdde2	user-requested exit	user-requested exit	solution good enough given atol and rtol	maximum number of iterations exceeded
+cdde3	maximum number of iterations exceeded	maximum number of iterations exceeded	solution good enough given atol and rtol	user-requested exit
+cdde4	user-requested exit	user-requested exit	solution good enough given atol and rtol	maximum number of iterations exceeded
+cdde5	maximum number of iterations exceeded	maximum number of iterations exceeded	solution good enough given atol and rtol	user-requested exit
 cdde6	maximum number of iterations exceeded	maximum number of iterations exceeded	solution good enough given atol and rtol	maximum number of iterations exceeded
-ck104	solution good enough given atol and rtol	solution good enough given atol and rtol	solution good enough given atol and rtol	maximum number of iterations exceeded
+ck104	user-requested exit	user-requested exit	solution good enough given atol and rtol	maximum number of iterations exceeded
 ck400	maximum number of iterations exceeded	maximum number of iterations exceeded	solution good enough given atol and rtol	maximum number of iterations exceeded
 ck656	maximum number of iterations exceeded	maximum number of iterations exceeded	solution good enough given atol and rtol	maximum number of iterations exceeded
 dw1024	maximum number of iterations exceeded	maximum number of iterations exceeded	solution good enough given atol and rtol	solution good enough given atol and rtol
-dw256A	maximum number of iterations exceeded	maximum number of iterations exceeded	solution good enough given atol and rtol	solution good enough given atol and rtol
+dw256A	maximum number of iterations exceeded	maximum number of iterations exceeded	solution good enough given atol and rtol	user-requested exit
 dw256B	solution good enough given atol and rtol	solution good enough given atol and rtol	solution good enough given atol and rtol	solution good enough given atol and rtol
-dw4096	maximum number of iterations exceeded	maximum number of iterations exceeded	solution good enough given atol and rtol	solution good enough given atol and rtol
+dw4096	maximum number of iterations exceeded	maximum number of iterations exceeded	maximum number of iterations exceeded	maximum number of iterations exceeded
 lop163	maximum number of iterations exceeded	maximum number of iterations exceeded	solution good enough given atol and rtol	maximum number of iterations exceeded
 mhda416	maximum number of iterations exceeded	maximum number of iterations exceeded	maximum number of iterations exceeded	maximum number of iterations exceeded
-odepa400	maximum number of iterations exceeded	maximum number of iterations exceeded	solution good enough given atol and rtol	solution good enough given atol and rtol
+odepa400	maximum number of iterations exceeded	maximum number of iterations exceeded	unknown	solution good enough given atol and rtol
 olm100	maximum number of iterations exceeded	maximum number of iterations exceeded	solution good enough given atol and rtol	maximum number of iterations exceeded
-olm1000	maximum number of iterations exceeded	maximum number of iterations exceeded	solution good enough given atol and rtol	maximum number of iterations exceeded
-olm2000	maximum number of iterations exceeded	maximum number of iterations exceeded	solution good enough given atol and rtol	maximum number of iterations exceeded
-olm500	maximum number of iterations exceeded	maximum number of iterations exceeded	solution good enough given atol and rtol	maximum number of iterations exceeded
-olm5000	maximum number of iterations exceeded	maximum number of iterations exceeded	solution good enough given atol and rtol	maximum number of iterations exceeded
-pde225	solution good enough given atol and rtol	solution good enough given atol and rtol	solution good enough given atol and rtol	maximum number of iterations exceeded
-pde2961	solution good enough given atol and rtol	solution good enough given atol and rtol	solution good enough given atol and rtol	solution good enough given atol and rtol
-pde900	solution good enough given atol and rtol	solution good enough given atol and rtol	solution good enough given atol and rtol	solution good enough given atol and rtol
+olm1000	maximum number of iterations exceeded	maximum number of iterations exceeded	user-requested exit	maximum number of iterations exceeded
+olm2000	maximum number of iterations exceeded	maximum number of iterations exceeded	user-requested exit	maximum number of iterations exceeded
+olm500	maximum number of iterations exceeded	maximum number of iterations exceeded	user-requested exit	maximum number of iterations exceeded
+olm5000	maximum number of iterations exceeded	maximum number of iterations exceeded	user-requested exit	maximum number of iterations exceeded
+pde225	user-requested exit	user-requested exit	solution good enough given atol and rtol	maximum number of iterations exceeded
+pde2961	user-requested exit	user-requested exit	solution good enough given atol and rtol	user-requested exit
+pde900	user-requested exit	user-requested exit	solution good enough given atol and rtol	user-requested exit
 qh882	maximum number of iterations exceeded	maximum number of iterations exceeded	maximum number of iterations exceeded	maximum number of iterations exceeded
 rbsa480	maximum number of iterations exceeded	maximum number of iterations exceeded	solution good enough given atol and rtol	maximum number of iterations exceeded
 rbsb480	maximum number of iterations exceeded	maximum number of iterations exceeded	maximum number of iterations exceeded	maximum number of iterations exceeded
 rdb2048	maximum number of iterations exceeded	maximum number of iterations exceeded	solution good enough given atol and rtol	maximum number of iterations exceeded
 rdb5000	maximum number of iterations exceeded	maximum number of iterations exceeded	solution good enough given atol and rtol	maximum number of iterations exceeded
 rdb968	maximum number of iterations exceeded	maximum number of iterations exceeded	solution good enough given atol and rtol	maximum number of iterations exceeded
-rw136	maximum number of iterations exceeded	maximum number of iterations exceeded	maximum number of iterations exceeded	maximum number of iterations exceeded
-rw496	maximum number of iterations exceeded	maximum number of iterations exceeded	maximum number of iterations exceeded	maximum number of iterations exceeded
+rw136	maximum number of iterations exceeded	maximum number of iterations exceeded	solution good enough given atol and rtol	solution good enough given atol and rtol
+rw496	maximum number of iterations exceeded	maximum number of iterations exceeded	solution good enough given atol and rtol	solution good enough given atol and rtol
 rw5151	maximum number of iterations exceeded	maximum number of iterations exceeded	maximum number of iterations exceeded	maximum number of iterations exceeded
-tub100	maximum number of iterations exceeded	maximum number of iterations exceeded	solution good enough given atol and rtol	solution good enough given atol and rtol
-tub1000	maximum number of iterations exceeded	maximum number of iterations exceeded	solution good enough given atol and rtol	solution good enough given atol and rtol
+tub100	maximum number of iterations exceeded	maximum number of iterations exceeded	solution good enough given atol and rtol	user-requested exit
+tub1000	maximum number of iterations exceeded	maximum number of iterations exceeded	user-requested exit	user-requested exit
 cryg10000	maximum number of iterations exceeded	maximum number of iterations exceeded	maximum number of iterations exceeded	maximum number of iterations exceeded
-cryg2500	maximum number of iterations exceeded	maximum number of iterations exceeded	solution good enough given atol and rtol	maximum number of iterations exceeded
+cryg2500	maximum number of iterations exceeded	maximum number of iterations exceeded	maximum number of iterations exceeded	maximum number of iterations exceeded
 dw2048	maximum number of iterations exceeded	maximum number of iterations exceeded	solution good enough given atol and rtol	solution good enough given atol and rtol
-dw8192	maximum number of iterations exceeded	maximum number of iterations exceeded	solution good enough given atol and rtol	solution good enough given atol and rtol
-dwa512	maximum number of iterations exceeded	maximum number of iterations exceeded	solution good enough given atol and rtol	solution good enough given atol and rtol
+dw8192	maximum number of iterations exceeded	maximum number of iterations exceeded	maximum number of iterations exceeded	maximum number of iterations exceeded
+dwa512	maximum number of iterations exceeded	maximum number of iterations exceeded	solution good enough given atol and rtol	user-requested exit
 dwb512	solution good enough given atol and rtol	solution good enough given atol and rtol	solution good enough given atol and rtol	solution good enough given atol and rtol
 mhd3200a	maximum number of iterations exceeded	maximum number of iterations exceeded	maximum number of iterations exceeded	maximum number of iterations exceeded
 mhd4800a	maximum number of iterations exceeded	maximum number of iterations exceeded	maximum number of iterations exceeded	maximum number of iterations exceeded
@@ -50,15 +50,15 @@ qh1484	maximum number of iterations exceeded	maximum number of iterations exceed
 qh768	maximum number of iterations exceeded	maximum number of iterations exceeded	maximum number of iterations exceeded	maximum number of iterations exceeded
 rdb1250	maximum number of iterations exceeded	maximum number of iterations exceeded	solution good enough given atol and rtol	maximum number of iterations exceeded
 rdb1250l	maximum number of iterations exceeded	maximum number of iterations exceeded	solution good enough given atol and rtol	maximum number of iterations exceeded
-rdb200	solution good enough given atol and rtol	solution good enough given atol and rtol	solution good enough given atol and rtol	maximum number of iterations exceeded
-rdb200l	solution good enough given atol and rtol	solution good enough given atol and rtol	solution good enough given atol and rtol	maximum number of iterations exceeded
+rdb200	user-requested exit	user-requested exit	solution good enough given atol and rtol	maximum number of iterations exceeded
+rdb200l	user-requested exit	user-requested exit	solution good enough given atol and rtol	maximum number of iterations exceeded
 rdb2048_noL	maximum number of iterations exceeded	maximum number of iterations exceeded	solution good enough given atol and rtol	maximum number of iterations exceeded
 rdb3200l	maximum number of iterations exceeded	maximum number of iterations exceeded	solution good enough given atol and rtol	maximum number of iterations exceeded
 rdb450	maximum number of iterations exceeded	maximum number of iterations exceeded	solution good enough given atol and rtol	maximum number of iterations exceeded
 rdb450l	maximum number of iterations exceeded	maximum number of iterations exceeded	solution good enough given atol and rtol	maximum number of iterations exceeded
 rdb800l	maximum number of iterations exceeded	maximum number of iterations exceeded	solution good enough given atol and rtol	maximum number of iterations exceeded
-tols1090	solution good enough given atol and rtol	maximum number of iterations exceeded	maximum number of iterations exceeded	maximum number of iterations exceeded
-tols2000	solution good enough given atol and rtol	maximum number of iterations exceeded	maximum number of iterations exceeded	maximum number of iterations exceeded
-tols340	maximum number of iterations exceeded	maximum number of iterations exceeded	maximum number of iterations exceeded	maximum number of iterations exceeded
-tols4000	solution good enough given atol and rtol	maximum number of iterations exceeded	maximum number of iterations exceeded	maximum number of iterations exceeded
+tols1090	user-requested exit	maximum number of iterations exceeded	maximum number of iterations exceeded	maximum number of iterations exceeded
+tols2000	user-requested exit	maximum number of iterations exceeded	maximum number of iterations exceeded	maximum number of iterations exceeded
+tols340	user-requested exit	maximum number of iterations exceeded	solution good enough given atol and rtol	solution good enough given atol and rtol
+tols4000	user-requested exit	maximum number of iterations exceeded	maximum number of iterations exceeded	maximum number of iterations exceeded
 tols90	maximum number of iterations exceeded	maximum number of iterations exceeded	maximum number of iterations exceeded	maximum number of iterations exceeded

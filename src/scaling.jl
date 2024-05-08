@@ -29,8 +29,8 @@ function unsymmetric_scaling(A::SparseMatrixCSC)
     nnzA = nnz(A)
 
     absA = abs.(A)
-    scale_row = maximum(absA, dims=1)[:]
-    scale_column = maximum(absA, dims=2)[:]
+    scale_row = maximum(absA, dims=2)[:]
+    scale_column = maximum(absA, dims=1)[:]
 
     Ir = findall(scale_row .== 0)
     if length(Ir) > 0

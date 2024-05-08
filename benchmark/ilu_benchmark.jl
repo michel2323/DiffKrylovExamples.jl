@@ -104,6 +104,13 @@ for setup in [(GmresSolver, false), (GmresSolver, true), (BicgstabSolver, false)
         # i = 1
         # case = cases[i]
         A, b = load_case(case[1])
+        if eltype(A) <: Complex
+            continue
+        end
+        if eltype(A) <: Int
+            A = SparseMatrixCSC{Float64,Int}(A)
+            b = Vector{Float64}(b)
+        end
         DAD, D = scaleSID(A)
         A = DAD
         b = D*b

@@ -1,3 +1,41 @@
 case,nit_noP,nit_P,adj_nit_noP,adj_nit_P
-bfwa398,user-requested exit,user-requested exit,user-requested exit,user-requested exit
-cdde4,user-requested exit,user-requested exit,user-requested exit,user-requested exit
+bfwa398,0,0,user-requested exit,user-requested exit
+bfwa62,0,0,user-requested exit,user-requested exit
+bfwa782,0,0,user-requested exit,user-requested exit
+bwm200,0,0,user-requested exit,user-requested exit
+bwm2000,0,0,user-requested exit,user-requested exit
+cdde1,0,0,user-requested exit,user-requested exit
+cdde2,0,0,user-requested exit,user-requested exit
+cdde3,0,0,user-requested exit,user-requested exit
+cdde4,0,0,user-requested exit,user-requested exit
+cdde5,0,0,user-requested exit,user-requested exit
+cdde6,0,0,user-requested exit,user-requested exit
+ck104,0,0,user-requested exit,user-requested exit
+ck400,0,0,user-requested exit,user-requested exit
+ck656,0,0,user-requested exit,user-requested exit
+dw1024,0,0,user-requested exit,user-requested exit
+dw256A,0,0,user-requested exit,user-requested exit
+dw256B,0,0,user-requested exit,user-requested exit
+dw4096,0,0,solution good enough given atol and rtol,solution good enough given atol and rtol
+lop163,0,0,user-requested exit,user-requested exit
+mhda416,0,0,solution good enough given atol and rtol,solution good enough given atol and rtol
+odepa400,0,0,user-requested exit,user-requested exit
+olm100,0,0,user-requested exit,user-requested exit
+olm1000,0,0,user-requested exit,user-requested exit
+olm2000,0,0,user-requested exit,user-requested exit
+olm500,0,0,user-requested exit,user-requested exit
+olm5000,0,0,user-requested exit,user-requested exit
+pde225,0,0,user-requested exit,user-requested exit
+pde2961,0,0,user-requested exit,user-requested exit
+pde900,0,0,user-requested exit,user-requested exit
+qh882,0,0,user-requested exit,user-requested exit
+rbsa480,0,0,solution good enough given atol and rtol,solution good enough given atol and rtol
+rbsb480,0,0,solution good enough given atol and rtol,solution good enough given atol and rtol
+rdb2048,0,0,user-requested exit,user-requested exit
+rdb5000,0,0,user-requested exit,user-requested exit
+rdb968,0,0,user-requested exit,user-requested exit
+rw136,0,0,user-requested exit,user-requested exit
+rw496,0,0,solution good enough given atol and rtol,solution good enough given atol and rtol
+rw5151,0,0,user-requested exit,user-requested exit
+tub100,0,0,user-requested exit,user-requested exit
+tub1000,0,0,user-requested exit,user-requested exit

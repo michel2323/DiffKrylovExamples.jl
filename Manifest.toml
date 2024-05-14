@@ -95,9 +95,7 @@ uuid = "ade2ca70-3891-5945-98fb-dc099432e06a"
 
 [[deps.DiffKrylov]]
 deps = ["Enzyme", "FiniteDifferences", "ForwardDiff", "IncompleteLU", "Krylov", "LinearAlgebra", "SparseArrays", "Test"]
-git-tree-sha1 = "0f16a59d1cd7bcb75293aa21cfbb03ae60120798"
-repo-rev = "ms/adconf"
-repo-url = "https://github.com/JuliaSmoothOptimizers/DiffKrylov.jl.git"
+path = "../DiffKrylov.jl"
 uuid = "de7797c5-59cd-4eef-8a62-bdd3ca55b1f9"
 version = "0.1.0"
 

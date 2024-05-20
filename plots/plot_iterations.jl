@@ -1,25 +1,41 @@
+import PythonPlot
 using Plots
+# using PyPlot
 using CSV
 using DataFrames
+using LaTeXStrings
 
+
+pythonplot()
+mycolor=:orange
+nopmycolor=:red
+PythonPlot.matplotlib.rcParams["text.usetex"] = true
+PythonPlot.matplotlib.rcParams["font.family"] = "serif"
+PythonPlot.matplotlib.rcParams["font.size"] = 12
 folder="results"
 ncases=64
+title = L"""
+GMRES $\alpha$
+"""
 
+@show String(title)
 cases = [
-    ["1e-8", "GMRES", "GmresSolver", false, :red],
-    ["1e-8", "GMRES Restart", "GmresSolver", true, :blue],
-    ["1e-8", "BiCGSTAB", "BicgstabSolver", false, :green]
+    ["1e-8", "GMRES", "GmresSolver", false, :orange, "1e^{-8}"],
+    ["1e-8", "GMRES(30)", "GmresSolver", true, :blue, "1e^{-8}"],
+    ["1e-8", "BiCGSTAB", "BicgstabSolver", false, :green, "1e^{-8}"]
 ]
 ps = []
+for (zoom,zend) in [(false, ""), (true, "z")]
 for case in cases
     stol = case[1]
     series = case[2]
     solver = case[3]
     restart = case[4]
     color = case[5]
+    ltol = case[6]
     tol = parse(Float64, case[1])
 
-    title = "$series solver with tol=$stol"
+    title = L"%$series $ $"
     df = CSV.read("$folder/(1.0e-10, 1.0e-10)/iters_$(solver)_$restart.csv", DataFrame)
 
     fiter = df[!,:nit_P]
@@ -46,8 +62,13 @@ for case in cases
     sort!(noPriter)
 
     # itermax = max(maximum(fiter), maximum(riter))
-    # itermax = max(maximum(fiter), maximum(riter), maximum(noPfiter), maximum(noPriter))
-    itermax = 10
+    itermax=0
+    @show zoom
+    if zoom
+        itermax = 10
+    else
+        itermax = max(maximum(fiter), maximum(riter), maximum(noPfiter), maximum(noPriter))
+    end
 
     fsuccess = zeros(Int, itermax)
     rsuccess = zeros(Int, itermax)
@@ -80,19 +101,21 @@ for case in cases
     # precond
 
     # yticks=collect(range(1,10))
-    p = plot()
+    p = plot(size=(250,250))
+    # PythonPlot.figure(figsize=(7.5,2.5))
     # plot!(p, fsuccess, label="Original", xlabel="Iterations", ylim=(1,ncases), ylabel="Successes", title=title, lw=2, linecolor=color)
     # plot!(p, rsuccess, label="Adjoint", lw=2, ylim=(1,ncases), linecolor=color, linestyle=:dash)
-    plot!(p, fsuccess, label="Original", xlabel="Iterations", ylim=(1,ncases), ylabel="Successes", title=title, lw=2, linecolor=:blue)
-    plot!(p, rsuccess, label="Adjoint", lw=2, ylim=(1,ncases), linecolor=:blue, linestyle=:dash)
-    plot!(p, noPfsuccess, label="Original no P", xlabel="Iterations", ylim=(1,ncases), ylabel="Successes", title=title, lw=2, linecolor=:red)
-    plot!(p, noPrsuccess, label="Adjoint no P", lw=2, ylim=(1,ncases), linecolor=:red, linestyle=:dash)
+    plot!(p, fsuccess, label="Original", xlabel="Iterations", ylim=(1,ncases), ylabel="Successes", title=title, lw=2, linecolor=:darkblue)
+    plot!(p, rsuccess, label="Adjoint", lw=2, ylim=(1,ncases), linecolor=:red)
+    plot!(p, noPfsuccess, label="Original no P", xlabel="Iterations", ylim=(1,ncases), ylabel="Successes", title=title, lw=2, linecolor=:orange)
+    plot!(p, noPrsuccess, label="Adjoint no P", lw=2, ylim=(1,ncases), linecolor=:green)
     push!(ps, p)
-    savefig(p, "results/plot_$(solver)_$(restart)_$(tol)_zoom.pdf")
+    savefig(p, "results/plot_$(solver)_$(restart)_$(tol)$(zend).pdf")
 end
-display(ps[1])
-display(ps[2])
-display(ps[3])
+end
+for p in ps
+    display(p)
+end
 # for (i,p) in enumerate(ps)
 #     savefig(p, "results/plot_$i.png")
 # end

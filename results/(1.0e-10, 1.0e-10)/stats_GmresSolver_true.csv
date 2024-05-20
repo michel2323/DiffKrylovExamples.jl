@@ -1,0 +1,65 @@
+case,nit_noP,nit_P,adj_nit_noP,adj_nit_P
+bfwa398,maximum number of iterations exceeded,maximum number of iterations exceeded,solution good enough given atol and rtol,solution good enough given atol and rtol
+bfwa62,maximum number of iterations exceeded,maximum number of iterations exceeded,solution good enough given atol and rtol,solution good enough given atol and rtol
+bfwa782,maximum number of iterations exceeded,maximum number of iterations exceeded,solution good enough given atol and rtol,solution good enough given atol and rtol
+bwm200,maximum number of iterations exceeded,maximum number of iterations exceeded,solution good enough given atol and rtol,solution good enough given atol and rtol
+bwm2000,maximum number of iterations exceeded,maximum number of iterations exceeded,solution good enough given atol and rtol,solution good enough given atol and rtol
+cdde1,maximum number of iterations exceeded,maximum number of iterations exceeded,solution good enough given atol and rtol,solution good enough given atol and rtol
+cdde2,solution good enough given atol and rtol,solution good enough given atol and rtol,solution good enough given atol and rtol,solution good enough given atol and rtol
+cdde3,maximum number of iterations exceeded,maximum number of iterations exceeded,solution good enough given atol and rtol,solution good enough given atol and rtol
+cdde4,solution good enough given atol and rtol,solution good enough given atol and rtol,solution good enough given atol and rtol,solution good enough given atol and rtol
+cdde5,maximum number of iterations exceeded,maximum number of iterations exceeded,solution good enough given atol and rtol,solution good enough given atol and rtol
+cdde6,maximum number of iterations exceeded,maximum number of iterations exceeded,solution good enough given atol and rtol,solution good enough given atol and rtol
+ck104,maximum number of iterations exceeded,maximum number of iterations exceeded,solution good enough given atol and rtol,solution good enough given atol and rtol
+ck400,maximum number of iterations exceeded,maximum number of iterations exceeded,solution good enough given atol and rtol,solution good enough given atol and rtol
+ck656,maximum number of iterations exceeded,maximum number of iterations exceeded,solution good enough given atol and rtol,solution good enough given atol and rtol
+dw1024,maximum number of iterations exceeded,maximum number of iterations exceeded,solution good enough given atol and rtol,solution good enough given atol and rtol
+dw256A,maximum number of iterations exceeded,maximum number of iterations exceeded,solution good enough given atol and rtol,solution good enough given atol and rtol
+dw256B,solution good enough given atol and rtol,solution good enough given atol and rtol,solution good enough given atol and rtol,solution good enough given atol and rtol
+dw4096,maximum number of iterations exceeded,maximum number of iterations exceeded,maximum number of iterations exceeded,maximum number of iterations exceeded
+lop163,maximum number of iterations exceeded,maximum number of iterations exceeded,solution good enough given atol and rtol,solution good enough given atol and rtol
+mhda416,maximum number of iterations exceeded,maximum number of iterations exceeded,maximum number of iterations exceeded,maximum number of iterations exceeded
+odepa400,maximum number of iterations exceeded,maximum number of iterations exceeded,unknown,unknown
+olm100,maximum number of iterations exceeded,maximum number of iterations exceeded,solution good enough given atol and rtol,solution good enough given atol and rtol
+olm1000,maximum number of iterations exceeded,maximum number of iterations exceeded,solution good enough given atol and rtol,solution good enough given atol and rtol
+olm2000,maximum number of iterations exceeded,maximum number of iterations exceeded,solution good enough given atol and rtol,solution good enough given atol and rtol
+olm500,maximum number of iterations exceeded,maximum number of iterations exceeded,solution good enough given atol and rtol,solution good enough given atol and rtol
+olm5000,maximum number of iterations exceeded,maximum number of iterations exceeded,solution good enough given atol and rtol,solution good enough given atol and rtol
+pde225,solution good enough given atol and rtol,solution good enough given atol and rtol,solution good enough given atol and rtol,solution good enough given atol and rtol
+pde2961,solution good enough given atol and rtol,solution good enough given atol and rtol,solution good enough given atol and rtol,solution good enough given atol and rtol
+pde900,solution good enough given atol and rtol,solution good enough given atol and rtol,solution good enough given atol and rtol,solution good enough given atol and rtol
+qh882,maximum number of iterations exceeded,maximum number of iterations exceeded,maximum number of iterations exceeded,maximum number of iterations exceeded
+rbsa480,maximum number of iterations exceeded,maximum number of iterations exceeded,maximum number of iterations exceeded,maximum number of iterations exceeded
+rbsb480,maximum number of iterations exceeded,maximum number of iterations exceeded,maximum number of iterations exceeded,maximum number of iterations exceeded
+rdb2048,maximum number of iterations exceeded,maximum number of iterations exceeded,solution good enough given atol and rtol,solution good enough given atol and rtol
+rdb5000,maximum number of iterations exceeded,maximum number of iterations exceeded,solution good enough given atol and rtol,solution good enough given atol and rtol
+rdb968,maximum number of iterations exceeded,maximum number of iterations exceeded,solution good enough given atol and rtol,solution good enough given atol and rtol
+rw136,maximum number of iterations exceeded,maximum number of iterations exceeded,maximum number of iterations exceeded,maximum number of iterations exceeded
+rw496,maximum number of iterations exceeded,maximum number of iterations exceeded,maximum number of iterations exceeded,maximum number of iterations exceeded
+rw5151,maximum number of iterations exceeded,maximum number of iterations exceeded,maximum number of iterations exceeded,maximum number of iterations exceeded
+tub100,maximum number of iterations exceeded,maximum number of iterations exceeded,solution good enough given atol and rtol,solution good enough given atol and rtol
+tub1000,maximum number of iterations exceeded,maximum number of iterations exceeded,solution good enough given atol and rtol,solution good enough given atol and rtol
+cryg10000,maximum number of iterations exceeded,maximum number of iterations exceeded,maximum number of iterations exceeded,maximum number of iterations exceeded
+cryg2500,maximum number of iterations exceeded,maximum number of iterations exceeded,maximum number of iterations exceeded,maximum number of iterations exceeded
+dw2048,maximum number of iterations exceeded,maximum number of iterations exceeded,solution good enough given atol and rtol,solution good enough given atol and rtol
+dw8192,maximum number of iterations exceeded,maximum number of iterations exceeded,maximum number of iterations exceeded,maximum number of iterations exceeded
+dwa512,maximum number of iterations exceeded,maximum number of iterations exceeded,solution good enough given atol and rtol,solution good enough given atol and rtol
+dwb512,solution good enough given atol and rtol,solution good enough given atol and rtol,solution good enough given atol and rtol,solution good enough given atol and rtol
+mhd3200a,maximum number of iterations exceeded,maximum number of iterations exceeded,maximum number of iterations exceeded,maximum number of iterations exceeded
+mhd4800a,maximum number of iterations exceeded,maximum number of iterations exceeded,maximum number of iterations exceeded,maximum number of iterations exceeded
+qh1484,maximum number of iterations exceeded,maximum number of iterations exceeded,maximum number of iterations exceeded,maximum number of iterations exceeded
+qh768,maximum number of iterations exceeded,maximum number of iterations exceeded,maximum number of iterations exceeded,maximum number of iterations exceeded
+rdb1250,maximum number of iterations exceeded,maximum number of iterations exceeded,solution good enough given atol and rtol,solution good enough given atol and rtol
+rdb1250l,maximum number of iterations exceeded,maximum number of iterations exceeded,solution good enough given atol and rtol,solution good enough given atol and rtol
+rdb200,solution good enough given atol and rtol,solution good enough given atol and rtol,solution good enough given atol and rtol,solution good enough given atol and rtol
+rdb200l,solution good enough given atol and rtol,solution good enough given atol and rtol,solution good enough given atol and rtol,solution good enough given atol and rtol
+rdb2048_noL,maximum number of iterations exceeded,maximum number of iterations exceeded,solution good enough given atol and rtol,solution good enough given atol and rtol
+rdb3200l,maximum number of iterations exceeded,maximum number of iterations exceeded,solution good enough given atol and rtol,solution good enough given atol and rtol
+rdb450,maximum number of iterations exceeded,maximum number of iterations exceeded,solution good enough given atol and rtol,solution good enough given atol and rtol
+rdb450l,maximum number of iterations exceeded,maximum number of iterations exceeded,solution good enough given atol and rtol,solution good enough given atol and rtol
+rdb800l,maximum number of iterations exceeded,maximum number of iterations exceeded,solution good enough given atol and rtol,solution good enough given atol and rtol
+tols1090,solution good enough given atol and rtol,solution good enough given atol and rtol,maximum number of iterations exceeded,maximum number of iterations exceeded
+tols2000,solution good enough given atol and rtol,solution good enough given atol and rtol,maximum number of iterations exceeded,maximum number of iterations exceeded
+tols340,solution good enough given atol and rtol,solution good enough given atol and rtol,maximum number of iterations exceeded,maximum number of iterations exceeded
+tols4000,solution good enough given atol and rtol,solution good enough given atol and rtol,maximum number of iterations exceeded,maximum number of iterations exceeded
+tols90,maximum number of iterations exceeded,maximum number of iterations exceeded,maximum number of iterations exceeded,maximum number of iterations exceeded

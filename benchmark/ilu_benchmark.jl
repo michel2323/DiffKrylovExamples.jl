@@ -30,7 +30,7 @@ function driver!(solver::GmresSolver, A, b, P, restart=false, atol=1e-6, rtol=1e
         verbose=0, restart=restart,
         ldiv = isa(P, IncompleteLU.ILUFactorization) ? true : false,
         atol = atol, rtol = rtol,
-        itmax = length(b)
+        itmax = 2000
     )
     return nothing
 end
@@ -40,10 +40,31 @@ function driver!(solver::BicgstabSolver, A, b, P, restart=false, atol=1e-6, rtol
         verbose=0,
         ldiv = isa(P, IncompleteLU.ILUFactorization) ? true : false,
         atol = atol, rtol = rtol,
-        itmax = length(b)
+        itmax = 2000
     )
     return nothing
 end
+
+function driver!(solver::BilqSolver, A, b, P, restart=false, atol=1e-6, rtol=1e-6)
+    bilq!(solver, A,b; M=P, N=I,
+        verbose=0,
+        ldiv = isa(P, IncompleteLU.ILUFactorization) ? true : false,
+        atol = atol, rtol = rtol,
+        itmax = 2000
+    )
+    return nothing
+end
+
+function driver!(solver::QmrSolver, A, b, P, restart=false, atol=1e-6, rtol=1e-6)
+    qmr!(solver, A,b; M=P, N=I,
+        verbose=0,
+        ldiv = isa(P, IncompleteLU.ILUFactorization) ? true : false,
+        atol = atol, rtol = rtol,
+        itmax = 2000
+    )
+    return nothing
+end
+
 
 function init_solver(fsolver, A, b, restart)
     if restart
@@ -123,26 +144,32 @@ include("../src/scaling.jl")
 results_header = ["case", "nit_noP", "nit_P", "adj_nit_noP", "adj_nit_P", "n", "res", "Pres", "adj_res", "adj_Pres"]
 stats_header = ["case", "nit_noP", "nit_P", "adj_nit_noP", "adj_nit_P"]
 # for tol in [1e-2] #[1e-2, 1e-5, 1e-8]
-for tol in [(1e-10, 1e-10)]
-# for setup in [(GmresSolver, false)]
+for (atol, rtol) in [(1e-10, 1e-10)]
+counter = 0
+# for (fsolver, restart) in [(QmrSolver, false)]
+# for (fsolver, restart) in [(GmresSolver, false)]
 # for setup in [(GmresSolver, true)]#, (BicgstabSolver, false)]
-for setup in [(GmresSolver, false), (GmresSolver, true), (BicgstabSolver, false)]
-    atol = tol[1]
-    rtol = tol[2]
-    fsolver, restart = setup
+for (fsolver, restart) in [
+    (GmresSolver, false), (GmresSolver, true),
+    (BicgstabSolver, false), (QmrSolver, false), (BilqSolver, false)
+]
     cases = xyz_cases
-    mkpath("./results/$(tol)")
+    mkpath("./results/$(atol)")
     # mkpath("./results/draft")
-    results_file = "./results/$(tol)/iters_$(fsolver)_$(restart).csv"
+    results_file = "./results/$(atol)/iters_$(fsolver)_$(restart).csv"
     # results_file = "./results/draft/iters_$(fsolver)_$(restart).csv"
-    stats_file = "./results/$(tol)/stats_$(fsolver)_$(restart).csv"
+    stats_file = "./results/$(atol)/stats_$(fsolver)_$(restart).csv"
     # stats_file = "./results/draft/stats_$(fsolver)_$(restart).csv"
     results = Matrix(undef, 0, 10)
     stats = Matrix(undef, 0, 5)
-    # for (i, case) in enumerate([cases[9]])
+    # for (i, case) in enumerate([cases[1]])
     for (i,case) in enumerate(cases)
-        println("$(case[1]) with solver=$fsolver, restart=$restart, tol=$tol")
+        println("$(case[1]) with solver=$fsolver, restart=$restart, tol=$atol")
         A, b = load_case(case[1])
+        # x = A\b
+        # if norm(b - A*x) > 1e-5
+        #     counter+=1
+        # end
         if eltype(A) <: Complex
             continue
         end
@@ -161,3 +188,10 @@ for setup in [(GmresSolver, false), (GmresSolver, true), (BicgstabSolver, false)
     end
 end
 end
+
+# A, b = load_case(xyz_cases[1][1])
+# P = ilu(A)
+# solver = BilqSolver(A, b)
+# bilq!(solver, A, b; M=P, N=I, verbose=0, ldiv=true, atol=1e-10, rtol=1e-10, itmax=2000)
+# driver!(solver, A, b, P, false, 1e-10, 1e-10)
+# solver.stats

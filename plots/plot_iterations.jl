@@ -20,9 +20,11 @@ GMRES $\alpha$
 
 @show String(title)
 cases = [
-    ["1e-8", "GMRES", "GmresSolver", false, :orange, "1e^{-8}"],
-    ["1e-8", "GMRES(30)", "GmresSolver", true, :blue, "1e^{-8}"],
-    ["1e-8", "BiCGSTAB", "BicgstabSolver", false, :green, "1e^{-8}"]
+    ["1e-6", "GMRES", "GmresSolver", false, :orange, "1e^{-6}"],
+    ["1e-6", "GMRES(30)", "GmresSolver", true, :blue, "1e^{-6}"],
+    ["1e-6", "BiCGSTAB", "BicgstabSolver", false, :green, "1e^{-6}"],
+    ["1e-6", "QMR", "QmrSolver", false, :green, "1e^{-6}"],
+    ["1e-6", "Bilq", "BilqSolver", false, :green, "1e^{-6}"]
 ]
 ps = []
 for (zoom,zend) in [(false, ""), (true, "z")]
@@ -36,7 +38,7 @@ for case in cases
     tol = parse(Float64, case[1])
 
     title = L"%$series $ $"
-    df = CSV.read("$folder/(1.0e-10, 1.0e-10)/iters_$(solver)_$restart.csv", DataFrame)
+    df = CSV.read("$folder/1.0e-10/iters_$(solver)_$restart.csv", DataFrame)
 
     fiter = df[!,:nit_P]
     riter = df[!,:adj_nit_P]
@@ -49,7 +51,8 @@ for case in cases
 
     noPfstats = df[!,:res]
     noPrstats = df[!,:adj_res]
-
+    @show riter 
+    @show rstats 
     fiter = fiter[findall(x -> x < tol, fstats)]
     riter = riter[findall(x -> x < tol, rstats)]
 
@@ -64,6 +67,7 @@ for case in cases
     # itermax = max(maximum(fiter), maximum(riter))
     itermax=0
     @show zoom
+    @show fiter, riter
     if zoom
         itermax = 10
     else

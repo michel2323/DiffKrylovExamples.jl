@@ -39,8 +39,8 @@ rw496,maximum number of iterations exceeded,maximum number of iterations exceede
 rw5151,maximum number of iterations exceeded,maximum number of iterations exceeded,maximum number of iterations exceeded,maximum number of iterations exceeded
 tub100,solution good enough given atol and rtol,solution good enough given atol and rtol,solution good enough given atol and rtol,solution good enough given atol and rtol
 tub1000,solution good enough given atol and rtol,solution good enough given atol and rtol,solution good enough given atol and rtol,solution good enough given atol and rtol
-cryg10000,solution good enough given atol and rtol,maximum number of iterations exceeded,maximum number of iterations exceeded,maximum number of iterations exceeded
-cryg2500,solution good enough given atol and rtol,maximum number of iterations exceeded,maximum number of iterations exceeded,solution good enough given atol and rtol
+cryg10000,solution good enough given atol and rtol,maximum number of iterations exceeded,solution good enough given atol and rtol,solution good enough given atol and rtol
+cryg2500,solution good enough given atol and rtol,solution good enough given atol and rtol,solution good enough given atol and rtol,solution good enough given atol and rtol
 dw2048,solution good enough given atol and rtol,solution good enough given atol and rtol,solution good enough given atol and rtol,solution good enough given atol and rtol
 dw8192,solution good enough given atol and rtol,solution good enough given atol and rtol,solution good enough given atol and rtol,solution good enough given atol and rtol
 dwa512,solution good enough given atol and rtol,solution good enough given atol and rtol,solution good enough given atol and rtol,solution good enough given atol and rtol

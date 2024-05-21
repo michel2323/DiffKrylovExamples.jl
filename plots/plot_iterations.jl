@@ -4,9 +4,11 @@ using Plots
 using CSV
 using DataFrames
 using LaTeXStrings
+# using PGFPlotsX
 
 
 pythonplot()
+# pgfplotsx()
 mycolor=:orange
 nopmycolor=:red
 PythonPlot.matplotlib.rcParams["text.usetex"] = true
@@ -106,10 +108,12 @@ for case in cases
     # plot!(p, fsuccess, label="Original", xlabel="Iterations", ylim=(1,ncases), ylabel="Successes", title=title, lw=2, linecolor=color)
     # plot!(p, rsuccess, label="Adjoint", lw=2, ylim=(1,ncases), linecolor=color, linestyle=:dash)
     legend = zoom ? :topright : :bottomright
-    plot!(p, fsuccess, label="Original", xlabel="Iterations", ylim=(1,ncases), ylabel="Successes", title=title, lw=2, linecolor=:darkblue, legend=legend)
+    plot!(p, fsuccess, label="Original", xlabel="Iterations", ylim=(1,ncases), ylabel="Successes", title=title, lw=2, linecolor=:darkblue, legend=legend, legendfontsize=5,)
     plot!(p, rsuccess, label="Adjoint", lw=2, ylim=(1,ncases), linecolor=:red)
-    plot!(p, noPfsuccess, label="Original no P", xlabel="Iterations", ylim=(1,ncases), ylabel="Successes", title=title, lw=2, linecolor=:orange)
-    plot!(p, noPrsuccess, label="Adjoint no P", lw=2, ylim=(1,ncases), linecolor=:green)
+    if !zoom
+        plot!(p, noPfsuccess, label="Preconditioned Original", xlabel="Iterations", ylim=(1,ncases), ylabel="Successes", title=title, lw=2, linecolor=:orange)
+        plot!(p, noPrsuccess, label="Preconditioned Adjoint", lw=2, ylim=(1,ncases), linecolor=:green)
+    end
     push!(ps, p)
     savefig(p, "results/plot_$(solver)_$(restart)_$(tol)$(zend).pdf")
 end

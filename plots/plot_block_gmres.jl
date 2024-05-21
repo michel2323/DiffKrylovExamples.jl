@@ -7,8 +7,6 @@ using LaTeXStrings
 
 
 pythonplot()
-# mycolor=:orange
-# nopmycolor=:red
 PythonPlot.matplotlib.rcParams["text.usetex"] = true
 PythonPlot.matplotlib.rcParams["font.family"] = "serif"
 PythonPlot.matplotlib.rcParams["font.size"] = 12
@@ -36,8 +34,7 @@ for fstat in fstats
 end
 fiters .= getindex.(fiters, sidx)
 sort!.(fiters)
-# itermax = max(maximum(fiter), maximum(riter))
-itermax = maximum(maximum.(fiters))
+itermax = 10
 
 fsuccess = [zeros(Int, itermax) for i in 1:4]
 for (k,fiter) in enumerate(fiters)
@@ -48,12 +45,8 @@ for (k,fiter) in enumerate(fiters)
     end
 end
 
-# yticks=collect(range(1,10))
 p = plot(size=(500,250))
-# PythonPlot.figure(figsize=(7.5,2.5))
-# plot!(p, fsuccess, label="Original", xlabel="Iterations", ylim=(1,ncases), ylabel="Successes", title=title, lw=2, linecolor=color)
-# plot!(p, rsuccess, label="Adjoint", lw=2, ylim=(1,ncases), linecolor=color, linestyle=:dash)
-plot!(p, fsuccess[1], label="GMRES", xlabel="Iterations", ylim=(1,ncases), ylabel="Successes", title=title, lw=1)
+plot!(p, fsuccess[1], label="GMRES", xlabel="Iterations", ylim=(1,ncases), ylabel="Successes", title=title, lw=1, legend=:bottomright)
 plot!(p, fsuccess[2], label="BGMRES8", xlabel="Iterations", ylim=(1,ncases), ylabel="Successes", title=title, lw=1)
 plot!(p, fsuccess[3], label="BGMRES16", xlabel="Iterations", ylim=(1,ncases), ylabel="Successes", title=title, lw=1)
 plot!(p, fsuccess[4], label="BGMRES32", xlabel="Iterations", ylim=(1,ncases), ylabel="Successes", title=title, lw=1)

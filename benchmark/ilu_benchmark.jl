@@ -79,31 +79,23 @@ function compare_precond_noprecond_ilu(fsolver, A, b, restart, atol, rtol, nopre
     A, Dr, Dc = unsymmetric_scaling(A)
     b = Dr * ones(length(b))
     db = copy(b)
-    # iters, stats = if noprecond
-        solver = init_solver(fsolver, A, b, restart)
-        dupsolver = Duplicated(solver, init_solver(fsolver, A, b, restart))
-        dupA = Duplicated(A, duplicate(A))
-        dupb = Duplicated(b, zeros(length(b)))
-        dupsolver.dval.x .= db
-        P = I
-        Enzyme.autodiff(
-            Reverse,
-            driver!,
-            dupsolver,
-            Const(A),
-            dupb,
-            Const(P), # nopreconditioning
-            Const(restart),
-            Const(atol),
-            Const(rtol),
-        )
-        # (
-        #     [dupsolver.val.stats.niter, dupsolver.dval.stats.niter],
-        #     [dupsolver.val.stats.status, dupsolver.dval.stats.status]
-        # )
-    # else
-    #     [0, 0], [0, 0]
-    # end
+    solver = init_solver(fsolver, A, b, restart)
+    dupsolver = Duplicated(solver, init_solver(fsolver, A, b, restart))
+    dupA = Duplicated(A, duplicate(A))
+    dupb = Duplicated(b, zeros(length(b)))
+    dupsolver.dval.x .= db
+    P = I
+    Enzyme.autodiff(
+        Reverse,
+        driver!,
+        dupsolver,
+        Const(A),
+        dupb,
+        Const(P), # nopreconditioning
+        Const(restart),
+        Const(atol),
+        Const(rtol),
+    )
     iters = [dupsolver.val.stats.niter, dupsolver.dval.stats.niter]
     stats = [dupsolver.val.stats.status, dupsolver.dval.stats.status]
     res = [norm(dupb.val - A*dupsolver.val.x), norm(db - adjoint(A)*dupsolver.dval.x)]
@@ -141,14 +133,12 @@ include("../src/load_case.jl")
 include("../cases/xyz_cases.jl")
 include("../src/scaling.jl")
 
-results_header = ["case", "nit_noP", "nit_P", "adj_nit_noP", "adj_nit_P", "n", "res", "Pres", "adj_res", "adj_Pres"]
+results_header = ["case", "nit_noP", "nit_P", "adj_nit_noP", "adj_nit_P", "res", "Pres", "adj_res", "adj_Pres", "n"]
 stats_header = ["case", "nit_noP", "nit_P", "adj_nit_noP", "adj_nit_P"]
 # for tol in [1e-2] #[1e-2, 1e-5, 1e-8]
 for (atol, rtol) in [(1e-10, 1e-10)]
 counter = 0
 # for (fsolver, restart) in [(QmrSolver, false)]
-# for (fsolver, restart) in [(GmresSolver, false)]
-# for setup in [(GmresSolver, true)]#, (BicgstabSolver, false)]
 for (fsolver, restart) in [
     (GmresSolver, false), (GmresSolver, true),
     (BicgstabSolver, false), (QmrSolver, false), (BilqSolver, false)
@@ -166,10 +156,6 @@ for (fsolver, restart) in [
     for (i,case) in enumerate(cases)
         println("$(case[1]) with solver=$fsolver, restart=$restart, tol=$atol")
         A, b = load_case(case[1])
-        # x = A\b
-        # if norm(b - A*x) > 1e-5
-        #     counter+=1
-        # end
         if eltype(A) <: Complex
             continue
         end
@@ -188,10 +174,3 @@ for (fsolver, restart) in [
     end
 end
 end
-
-# A, b = load_case(xyz_cases[1][1])
-# P = ilu(A)
-# solver = BilqSolver(A, b)
-# bilq!(solver, A, b; M=P, N=I, verbose=0, ldiv=true, atol=1e-10, rtol=1e-10, itmax=2000)
-# driver!(solver, A, b, P, false, 1e-10, 1e-10)
-# solver.stats

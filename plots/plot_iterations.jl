@@ -24,7 +24,7 @@ cases = [
     ["1e-6", "GMRES(30)", "GmresSolver", true, :blue, "1e^{-6}"],
     ["1e-6", "BiCGSTAB", "BicgstabSolver", false, :green, "1e^{-6}"],
     ["1e-6", "QMR", "QmrSolver", false, :green, "1e^{-6}"],
-    ["1e-6", "Bilq", "BilqSolver", false, :green, "1e^{-6}"]
+    ["1e-6", "BiLQ", "BilqSolver", false, :green, "1e^{-6}"]
 ]
 ps = []
 for (zoom,zend) in [(false, ""), (true, "z")]
@@ -51,8 +51,6 @@ for case in cases
 
     noPfstats = df[!,:res]
     noPrstats = df[!,:adj_res]
-    @show riter 
-    @show rstats 
     fiter = fiter[findall(x -> x < tol, fstats)]
     riter = riter[findall(x -> x < tol, rstats)]
 
@@ -66,8 +64,6 @@ for case in cases
 
     # itermax = max(maximum(fiter), maximum(riter))
     itermax=0
-    @show zoom
-    @show fiter, riter
     if zoom
         itermax = 10
     else
@@ -109,7 +105,8 @@ for case in cases
     # PythonPlot.figure(figsize=(7.5,2.5))
     # plot!(p, fsuccess, label="Original", xlabel="Iterations", ylim=(1,ncases), ylabel="Successes", title=title, lw=2, linecolor=color)
     # plot!(p, rsuccess, label="Adjoint", lw=2, ylim=(1,ncases), linecolor=color, linestyle=:dash)
-    plot!(p, fsuccess, label="Original", xlabel="Iterations", ylim=(1,ncases), ylabel="Successes", title=title, lw=2, linecolor=:darkblue)
+    legend = zoom ? :topright : :bottomright
+    plot!(p, fsuccess, label="Original", xlabel="Iterations", ylim=(1,ncases), ylabel="Successes", title=title, lw=2, linecolor=:darkblue, legend=legend)
     plot!(p, rsuccess, label="Adjoint", lw=2, ylim=(1,ncases), linecolor=:red)
     plot!(p, noPfsuccess, label="Original no P", xlabel="Iterations", ylim=(1,ncases), ylabel="Successes", title=title, lw=2, linecolor=:orange)
     plot!(p, noPrsuccess, label="Adjoint no P", lw=2, ylim=(1,ncases), linecolor=:green)
@@ -120,6 +117,3 @@ end
 for p in ps
     display(p)
 end
-# for (i,p) in enumerate(ps)
-#     savefig(p, "results/plot_$i.png")
-# end

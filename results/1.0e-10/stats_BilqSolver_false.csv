@@ -16,7 +16,7 @@ ck656,solution xᶜ good enough given atol and rtol,solution xᶜ good enough gi
 dw1024,solution xᶜ good enough given atol and rtol,solution xᶜ good enough given atol and rtol,solution xᶜ good enough given atol and rtol,solution xᶜ good enough given atol and rtol
 dw256A,solution xᶜ good enough given atol and rtol,solution xᶜ good enough given atol and rtol,solution xᶜ good enough given atol and rtol,solution xᶜ good enough given atol and rtol
 dw256B,solution xᶜ good enough given atol and rtol,solution xᶜ good enough given atol and rtol,solution xᶜ good enough given atol and rtol,solution xᶜ good enough given atol and rtol
-dw4096,maximum number of iterations exceeded,maximum number of iterations exceeded,solution xᴸ good enough given atol and rtol,solution xᴸ good enough given atol and rtol
+dw4096,maximum number of iterations exceeded,maximum number of iterations exceeded,solution xᶜ good enough given atol and rtol,solution xᶜ good enough given atol and rtol
 lop163,solution xᶜ good enough given atol and rtol,solution xᶜ good enough given atol and rtol,solution xᶜ good enough given atol and rtol,solution xᶜ good enough given atol and rtol
 mhda416,maximum number of iterations exceeded,maximum number of iterations exceeded,maximum number of iterations exceeded,maximum number of iterations exceeded
 odepa400,solution xᶜ good enough given atol and rtol,solution xᶜ good enough given atol and rtol,solution xᶜ good enough given atol and rtol,solution xᶜ good enough given atol and rtol
@@ -24,3 +24,42 @@ olm100,maximum number of iterations exceeded,maximum number of iterations exceed
 olm1000,solution xᶜ good enough given atol and rtol,solution xᶜ good enough given atol and rtol,solution xᶜ good enough given atol and rtol,solution xᶜ good enough given atol and rtol
 olm2000,solution xᶜ good enough given atol and rtol,solution xᶜ good enough given atol and rtol,solution xᶜ good enough given atol and rtol,solution xᶜ good enough given atol and rtol
 olm500,solution xᶜ good enough given atol and rtol,solution xᶜ good enough given atol and rtol,solution xᶜ good enough given atol and rtol,solution xᶜ good enough given atol and rtol
+olm5000,solution xᶜ good enough given atol and rtol,solution xᶜ good enough given atol and rtol,solution xᶜ good enough given atol and rtol,solution xᶜ good enough given atol and rtol
+pde225,solution xᶜ good enough given atol and rtol,solution xᶜ good enough given atol and rtol,solution xᶜ good enough given atol and rtol,solution xᶜ good enough given atol and rtol
+pde2961,solution xᶜ good enough given atol and rtol,solution xᶜ good enough given atol and rtol,solution xᶜ good enough given atol and rtol,solution xᶜ good enough given atol and rtol
+pde900,solution xᶜ good enough given atol and rtol,solution xᶜ good enough given atol and rtol,solution xᶜ good enough given atol and rtol,solution xᶜ good enough given atol and rtol
+qh882,maximum number of iterations exceeded,maximum number of iterations exceeded,maximum number of iterations exceeded,maximum number of iterations exceeded
+rbsa480,maximum number of iterations exceeded,maximum number of iterations exceeded,solution xᶜ good enough given atol and rtol,solution xᶜ good enough given atol and rtol
+rbsb480,maximum number of iterations exceeded,maximum number of iterations exceeded,solution xᶜ good enough given atol and rtol,solution xᶜ good enough given atol and rtol
+rdb2048,solution xᶜ good enough given atol and rtol,solution xᶜ good enough given atol and rtol,solution xᶜ good enough given atol and rtol,solution xᶜ good enough given atol and rtol
+rdb5000,solution xᶜ good enough given atol and rtol,solution xᶜ good enough given atol and rtol,solution xᶜ good enough given atol and rtol,solution xᶜ good enough given atol and rtol
+rdb968,solution xᶜ good enough given atol and rtol,solution xᶜ good enough given atol and rtol,solution xᶜ good enough given atol and rtol,solution xᶜ good enough given atol and rtol
+rw136,solution xᶜ good enough given atol and rtol,maximum number of iterations exceeded,maximum number of iterations exceeded,maximum number of iterations exceeded
+rw496,maximum number of iterations exceeded,maximum number of iterations exceeded,maximum number of iterations exceeded,maximum number of iterations exceeded
+rw5151,maximum number of iterations exceeded,solution xᶜ good enough given atol and rtol,maximum number of iterations exceeded,maximum number of iterations exceeded
+tub100,solution xᶜ good enough given atol and rtol,solution xᶜ good enough given atol and rtol,solution xᶜ good enough given atol and rtol,solution xᶜ good enough given atol and rtol
+tub1000,maximum number of iterations exceeded,maximum number of iterations exceeded,solution xᶜ good enough given atol and rtol,solution xᶜ good enough given atol and rtol
+cryg10000,maximum number of iterations exceeded,maximum number of iterations exceeded,solution xᶜ good enough given atol and rtol,maximum number of iterations exceeded
+cryg2500,solution xᶜ good enough given atol and rtol,solution xᶜ good enough given atol and rtol,solution xᶜ good enough given atol and rtol,solution xᶜ good enough given atol and rtol
+dw2048,solution xᶜ good enough given atol and rtol,solution xᶜ good enough given atol and rtol,solution xᶜ good enough given atol and rtol,solution xᶜ good enough given atol and rtol
+dw8192,maximum number of iterations exceeded,maximum number of iterations exceeded,solution xᶜ good enough given atol and rtol,solution xᶜ good enough given atol and rtol
+dwa512,solution xᶜ good enough given atol and rtol,solution xᶜ good enough given atol and rtol,solution xᶜ good enough given atol and rtol,solution xᶜ good enough given atol and rtol
+dwb512,solution xᶜ good enough given atol and rtol,solution xᶜ good enough given atol and rtol,solution xᶜ good enough given atol and rtol,solution xᶜ good enough given atol and rtol
+mhd3200a,solution xᶜ good enough given atol and rtol,maximum number of iterations exceeded,maximum number of iterations exceeded,maximum number of iterations exceeded
+mhd4800a,maximum number of iterations exceeded,maximum number of iterations exceeded,maximum number of iterations exceeded,maximum number of iterations exceeded
+qh1484,maximum number of iterations exceeded,maximum number of iterations exceeded,maximum number of iterations exceeded,maximum number of iterations exceeded
+qh768,maximum number of iterations exceeded,maximum number of iterations exceeded,maximum number of iterations exceeded,maximum number of iterations exceeded
+rdb1250,solution xᶜ good enough given atol and rtol,solution xᶜ good enough given atol and rtol,solution xᶜ good enough given atol and rtol,solution xᶜ good enough given atol and rtol
+rdb1250l,solution xᶜ good enough given atol and rtol,solution xᶜ good enough given atol and rtol,solution xᶜ good enough given atol and rtol,solution xᶜ good enough given atol and rtol
+rdb200,solution xᶜ good enough given atol and rtol,solution xᶜ good enough given atol and rtol,solution xᶜ good enough given atol and rtol,solution xᶜ good enough given atol and rtol
+rdb200l,solution xᶜ good enough given atol and rtol,solution xᶜ good enough given atol and rtol,solution xᶜ good enough given atol and rtol,solution xᶜ good enough given atol and rtol
+rdb2048_noL,solution xᶜ good enough given atol and rtol,solution xᶜ good enough given atol and rtol,solution xᶜ good enough given atol and rtol,solution xᶜ good enough given atol and rtol
+rdb3200l,solution xᶜ good enough given atol and rtol,solution xᶜ good enough given atol and rtol,solution xᶜ good enough given atol and rtol,solution xᶜ good enough given atol and rtol
+rdb450,solution xᶜ good enough given atol and rtol,solution xᶜ good enough given atol and rtol,solution xᶜ good enough given atol and rtol,solution xᶜ good enough given atol and rtol
+rdb450l,solution xᶜ good enough given atol and rtol,solution xᶜ good enough given atol and rtol,solution xᶜ good enough given atol and rtol,solution xᶜ good enough given atol and rtol
+rdb800l,solution xᶜ good enough given atol and rtol,solution xᶜ good enough given atol and rtol,solution xᶜ good enough given atol and rtol,solution xᶜ good enough given atol and rtol
+tols1090,solution xᶜ good enough given atol and rtol,solution xᶜ good enough given atol and rtol,solution xᶜ good enough given atol and rtol,solution xᶜ good enough given atol and rtol
+tols2000,maximum number of iterations exceeded,maximum number of iterations exceeded,maximum number of iterations exceeded,maximum number of iterations exceeded
+tols340,solution xᶜ good enough given atol and rtol,solution xᶜ good enough given atol and rtol,solution xᶜ good enough given atol and rtol,solution xᶜ good enough given atol and rtol
+tols4000,solution xᶜ good enough given atol and rtol,solution xᶜ good enough given atol and rtol,maximum number of iterations exceeded,maximum number of iterations exceeded
+tols90,solution xᶜ good enough given atol and rtol,solution xᶜ good enough given atol and rtol,maximum number of iterations exceeded,maximum number of iterations exceeded

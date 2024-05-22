@@ -46,9 +46,9 @@ for (k,fiter) in enumerate(fiters)
 end
 
 p = plot(size=(500,250))
-plot!(p, fsuccess[1], label="GMRES", xlabel="Iterations", ylim=(1,ncases), ylabel="Successes", title=title, lw=2, legend=:bottomright)
-plot!(p, fsuccess[2], label="BGMRES8", xlabel="Iterations", ylim=(1,ncases), ylabel="Successes", title=title, lw=2)
-plot!(p, fsuccess[3], label="BGMRES16", xlabel="Iterations", ylim=(1,ncases), ylabel="Successes", title=title, lw=2)
-plot!(p, fsuccess[4], label="BGMRES32", xlabel="Iterations", ylim=(1,ncases), ylabel="Successes", title=title, lw=2)
+plot!(p, fsuccess[1], label="GMRES", xlabel="Iterations", ylim=(1,ncases), ylabel="Successes", title=title, lw=1.5, linestyle=:dot, legend=:bottomright)
+plot!(p, fsuccess[2], label="BGMRES8", xlabel="Iterations", ylim=(1,ncases), ylabel="Successes", title=title, lw=1.5, linestyle=:dash)
+plot!(p, fsuccess[3], label="BGMRES16", xlabel="Iterations", ylim=(1,ncases), ylabel="Successes", title=title, lw=1.5, linestyle=:dashdot)
+plot!(p, fsuccess[4], label="BGMRES32", xlabel="Iterations", ylim=(1,ncases), ylabel="Successes", title=title, lw=1.5, linestyle=:solid)
 savefig(p, "results/plot_blockgmres.png")
 savefig(p, "results/plot_blockgmres.pdf")

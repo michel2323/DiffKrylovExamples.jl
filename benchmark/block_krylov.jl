@@ -36,14 +36,19 @@ function run_case(A, b, ps)
 
     # Forward Run
 
-    x = A\b
+    x = A \ b
 
     kA, Dr, Dc = unsymmetric_scaling(A)
-    kb = Dr*b
+    kb = Dr * b
     M = ilu(kA)
 
-    ky, stats = gmres(kA,kb; atol=atol, rtol=rtol, M=M, ldiv=true, itmax=2000) 
-    kx = Dc*ky
+    # n = size(M.U, 1)
+    # for i = 1:n
+    #     M.U[i,i] += 1e-8
+    # end
+
+    ky, stats = gmres(kA, kb; atol=atol, rtol=rtol, M=M, ldiv=true, itmax=2000)
+    kx = Dc * ky
     # @assert isapprox(norm(kx), norm(x), atol=1e-8)
 
     # Reverse run
@@ -65,9 +70,9 @@ function run_case(A, b, ps)
         dX = seeds(A, b, p)
         # dB = adjoint(A)\dX
 
-        kdX = Dc*dX
+        kdX = Dc * dX
         kW, stats = block_gmres(adjoint(kA),kdX; atol=atol, rtol=rtol, M=adjoint(M), ldiv=true, itmax=2000)
-        kdB = Dr*kW
+        kdB = Dr * kW
         println("Vector Reverse run -- Iterations: $(stats.niter)")
         push!(iters, stats.niter)
         push!(status, stats.status)

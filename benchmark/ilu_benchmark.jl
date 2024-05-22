@@ -106,6 +106,12 @@ function compare_precond_noprecond_ilu(fsolver, A, b, restart, atol, rtol, nopre
     dupb = Duplicated(ones(length(b)), zeros(length(b)))
     dupsolver.dval.x .= db
     P = ilu(A)
+
+    # n = size(P.U, 1)
+    # for i = 1:n
+    #     P.U[i,i] += 1e-8
+    # end
+
     rb = copy(b)
     normr = norm(ldiv!(P,rb))
     rtol = atol/normr
@@ -137,40 +143,41 @@ results_header = ["case", "nit_noP", "nit_P", "adj_nit_noP", "adj_nit_P", "res",
 stats_header = ["case", "nit_noP", "nit_P", "adj_nit_noP", "adj_nit_P"]
 # for tol in [1e-2] #[1e-2, 1e-5, 1e-8]
 for (atol, rtol) in [(1e-10, 1e-10)]
-counter = 0
-# for (fsolver, restart) in [(QmrSolver, false)]
-for (fsolver, restart) in [
-    (GmresSolver, false), (GmresSolver, true),
-    (BicgstabSolver, false), (QmrSolver, false), (BilqSolver, false)
-]
-    cases = xyz_cases
-    mkpath("./results/$(atol)")
-    # mkpath("./results/draft")
-    results_file = "./results/$(atol)/iters_$(fsolver)_$(restart).csv"
-    # results_file = "./results/draft/iters_$(fsolver)_$(restart).csv"
-    stats_file = "./results/$(atol)/stats_$(fsolver)_$(restart).csv"
-    # stats_file = "./results/draft/stats_$(fsolver)_$(restart).csv"
-    results = Matrix(undef, 0, 10)
-    stats = Matrix(undef, 0, 5)
-    # for (i, case) in enumerate([cases[1]])
-    for (i,case) in enumerate(cases)
-        println("$(case[1]) with solver=$fsolver, restart=$restart, tol=$atol")
-        A, b = load_case(case[1])
-        if eltype(A) <: Complex
-            continue
+    counter = 0
+    # for (fsolver, restart) in [(QmrSolver, false)]
+    for (fsolver, restart) in [(GmresSolver, false),
+                               (GmresSolver, true),
+                               (BicgstabSolver, false),
+                               (QmrSolver, false),
+                               (BilqSolver, false)]
+        cases = xyz_cases
+        mkpath("./results/$(atol)")
+        # mkpath("./results/draft")
+        results_file = "./results/$(atol)/iters_$(fsolver)_$(restart).csv"
+        # results_file = "./results/draft/iters_$(fsolver)_$(restart).csv"
+        stats_file = "./results/$(atol)/stats_$(fsolver)_$(restart).csv"
+        # stats_file = "./results/draft/stats_$(fsolver)_$(restart).csv"
+        results = Matrix(undef, 0, 10)
+        stats = Matrix(undef, 0, 5)
+        # for (i, case) in enumerate([cases[1]])
+        for (i,case) in enumerate(cases)
+            println("$(case[1]) with solver=$fsolver, restart=$restart, tol=$atol")
+            A, b = load_case(case[1])
+            if eltype(A) <: Complex
+                continue
+            end
+            if eltype(A) <: Int
+                A = SparseMatrixCSC{Float64,Int}(A)
+                b = Vector{Float64}(b)
+            end
+            n = size(A,1)
+            iters, stat, res = compare_precond_noprecond_ilu(fsolver,A,b,restart,atol, rtol, false)
+            results = vcat(results, reshape([case[1], iters[1], iters[3], iters[2], iters[4], res[1], res[3], res[2], res[4], n], (1,10)))
+            stats = vcat(stats, reshape([case[1], stat[1], stat[2], stat[3], stat[4]], (1,5)))
+            df_results = DataFrame(results, Symbol.(results_header))
+            df_stats = DataFrame(stats, Symbol.(stats_header))
+            CSV.write(results_file, df_results)
+            CSV.write(stats_file, df_stats)
         end
-        if eltype(A) <: Int
-            A = SparseMatrixCSC{Float64,Int}(A)
-            b = Vector{Float64}(b)
-        end
-        n = size(A,1)
-        iters, stat, res = compare_precond_noprecond_ilu(fsolver,A,b,restart,atol, rtol, false)
-        results = vcat(results, reshape([case[1], iters[1], iters[3], iters[2], iters[4], res[1], res[3], res[2], res[4], n], (1,10)))
-        stats = vcat(stats, reshape([case[1], stat[1], stat[2], stat[3], stat[4]], (1,5)))
-        df_results = DataFrame(results, Symbol.(results_header))
-        df_stats = DataFrame(stats, Symbol.(stats_header))
-        CSV.write(results_file, df_results)
-        CSV.write(stats_file, df_stats)
     end
-end
 end

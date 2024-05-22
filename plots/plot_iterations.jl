@@ -108,11 +108,11 @@ for case in cases
     # plot!(p, fsuccess, label="Original", xlabel="Iterations", ylim=(1,ncases), ylabel="Successes", title=title, lw=2, linecolor=color)
     # plot!(p, rsuccess, label="Adjoint", lw=2, ylim=(1,ncases), linecolor=color, linestyle=:dash)
     legend = zoom ? :topright : :bottomright
-    plot!(p, fsuccess, label="Original", xlabel="Iterations", ylim=(1,ncases), ylabel="Successes", title=title, lw=2, linecolor=:darkblue, legend=legend, legendfontsize=5,)
-    plot!(p, rsuccess, label="Adjoint", lw=2, ylim=(1,ncases), linecolor=:red)
+    plot!(p, rsuccess, label="Adjoint", lw=1.5, ylim=(1,ncases), linecolor=:red, linestyle=:dash)
+    plot!(p, fsuccess, label="Original", xlabel="Iterations", ylim=(1,ncases), ylabel="Successes", title=title, lw=1.5, linecolor=:darkblue, linestyle=:dot, legend=legend, legendfontsize=5,)
     if !zoom
-        plot!(p, noPfsuccess, label="Preconditioned Original", xlabel="Iterations", ylim=(1,ncases), ylabel="Successes", title=title, lw=2, linecolor=:orange)
-        plot!(p, noPrsuccess, label="Preconditioned Adjoint", lw=2, ylim=(1,ncases), linecolor=:green)
+        plot!(p, noPrsuccess, label="Preconditioned Adjoint", lw=1.5, ylim=(1,ncases), linecolor=:green, linestyle=:solid)
+        plot!(p, noPfsuccess, label="Preconditioned Original", xlabel="Iterations", ylim=(1,ncases), ylabel="Successes", title=title, lw=1.5, linecolor=:orange, linestyle=:dashdot)
     end
     push!(ps, p)
     savefig(p, "results/plot_$(solver)_$(restart)_$(tol)$(zend).pdf")

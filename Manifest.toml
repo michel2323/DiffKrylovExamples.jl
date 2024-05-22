@@ -95,7 +95,9 @@ uuid = "ade2ca70-3891-5945-98fb-dc099432e06a"
 
 [[deps.DiffKrylov]]
 deps = ["Enzyme", "FiniteDifferences", "ForwardDiff", "IncompleteLU", "Krylov", "LinearAlgebra", "SparseArrays", "Test"]
-path = "../DiffKrylov.jl"
+git-tree-sha1 = "176cf56ea1b5e197acc4dbdfbc050404cbe7e3b1"
+repo-rev = "ms/adconf"
+repo-url = "https://github.com/JuliaSmoothOptimizers/DiffKrylov.jl.git"
 uuid = "de7797c5-59cd-4eef-8a62-bdd3ca55b1f9"
 version = "0.1.0"
 
@@ -250,7 +252,9 @@ version = "1.5.0"
 
 [[deps.Krylov]]
 deps = ["LinearAlgebra", "Printf", "SparseArrays"]
-path = "/disk/mschanen/julia_depot/dev/Krylov"
+git-tree-sha1 = "7ac91aebb92fb1348f8b7b392aadca517d8a1781"
+repo-rev = "bilq_qmr_preconditioners"
+repo-url = "https://github.com/michel2323/Krylov.jl.git"
 uuid = "ba0b0d4f-ebba-5204-a429-3ac8c609bfb7"
 version = "0.9.6"
 
